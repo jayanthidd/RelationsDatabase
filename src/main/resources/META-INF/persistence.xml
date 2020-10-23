@@ -10,6 +10,7 @@
         -->
         <class>at.campus02.dbp2.jpa.Student</class>
         <class>at.campus02.dbp2.jpa.Animal</class>
+        <class>at.campus02.dbp2.jpa.Species</class>
 
         <properties>
             <!--

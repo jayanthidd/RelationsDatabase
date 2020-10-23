@@ -16,8 +16,22 @@ public class Student {
     private LocalDate birthday;
     private Gender gender;
 
-    @OneToOne (mappedBy = "owner")
+    @OneToOne (mappedBy = "owner", cascade = CascadeType.ALL)
     private Animal pet;
+    // bunny.setowner(student) will ensure the value of pet is also set here with the refresh function.  This is because the mapping is done here.
+    //  it wont work the other way around
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
+    }
 
     public Integer getId() {
         return id;
